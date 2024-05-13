@@ -1,5 +1,3 @@
-// components/Hexagon.js
-
 import React from 'react';
 import styles from './Hexagon.module.css';
 
