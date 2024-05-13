@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
         {/* {yedi_haneli_kelimeler} */}
-        <Hive letter='A'></Hive>
+        <Hive letters={['a', 'b', 'c', 'd', 'e', 'f', 'g']}></Hive>
     </main>
   );
 }
