@@ -11,15 +11,21 @@ const Hive = (props) => {
     })
 
     return (
-        <div>
+        <div className='hexagon-container'>
             {/* {hexagons} */}
-            <Hexagon id='hexagon-0'> {props.letters[0]} </Hexagon>
-            <Hexagon id='hexagon-1'> {props.letters[1]} </Hexagon>
-            <Hexagon id='hexagon-2'> {props.letters[2]} </Hexagon>
-            <Hexagon id='hexagon-3'> {props.letters[3]} </Hexagon>
-            <Hexagon id='hexagon-4'> {props.letters[4]} </Hexagon>
-            <Hexagon id='hexagon-5'> {props.letters[5]} </Hexagon>
-            <Hexagon id='hexagon-6'> {props.letters[6]} </Hexagon>
+            <div className='hive-upper-row'>
+                <Hexagon id='hexagon-0'> {props.letters[0]} </Hexagon>
+                <Hexagon id='hexagon-1'> {props.letters[1]} </Hexagon>
+            </div>
+            <div className='hive-middle-row'>
+                <Hexagon id='hexagon-2'> {props.letters[2]} </Hexagon>
+                <Hexagon id='hexagon-3'> {props.letters[3]} </Hexagon>
+                <Hexagon id='hexagon-4'> {props.letters[4]} </Hexagon>
+            </div>
+            <div className='hive-lower-row'>
+                <Hexagon id='hexagon-5'> {props.letters[5]} </Hexagon>
+                <Hexagon id='hexagon-6'> {props.letters[6]} </Hexagon>
+            </div>
         </div>
     )
 }

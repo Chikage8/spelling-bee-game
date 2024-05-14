@@ -5,7 +5,6 @@ import Hive from './ui/Hive';
 import './styles/global.css';
 
 export default function Home() {
-
   let yedi_haneli_kelimeler = []
   turkish_dictionary[7].map((yedi_haneli) => {
     yedi_haneli_kelimeler.push(<p>{yedi_haneli}</p>)

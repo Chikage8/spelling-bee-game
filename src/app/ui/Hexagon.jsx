@@ -3,8 +3,6 @@ import React from 'react';
 
 const Hexagon = ({ children, id }) => {
 
-  console.log(id)
-
   return (
     <div className="hexagon" id={id}>
       <div className="inner">

@@ -1,3 +1,10 @@
+:root {
+    --hex-top: 10%;
+    --hex-right: 10%;
+    --hex-bottom: 10%;
+    --hex-left: 10%;
+}
+
 html,
 body {
   padding: 0;
@@ -36,9 +43,41 @@ img {
   display: block;
 }
 
+.hexagon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* display: grid; */
+    
+}
+
+.hive-upper-row {
+    display: flex;
+    gap: 2%;
+    width: 67%;
+    margin-left: 6%;
+}
+
+.hive-middle-row {
+    display: flex;
+    gap: 1%;
+    transform: translate(0, -25px);
+}
+
+.hive-lower-row {
+    display: flex;
+    gap: 1%;
+    width: 67%;
+    margin-left: 6%;
+    transform: translate(0, -50px);
+}
 
 .hexagon {
     position: relative;
+    top: var(--hex-top);
+    right: var(--hex-right);
+    bottom: var(--hex-bottom);
+    left: var(--hex-left);
     width: 100px;
     height: 57.735px;
     background-color: #6C757D;
@@ -81,9 +120,7 @@ img {
 }
 
 #hexagon-1 {
-  display: none;
-  /* margin-bottom: 10px;
-  margin-left: 10px; */
+  /* margin-bottom: 100px; */
 }
 
 #hexagon-2 {
