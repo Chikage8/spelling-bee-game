@@ -3,6 +3,7 @@
     --hex-right: 10%;
     --hex-bottom: 10%;
     --hex-left: 10%;
+    --hex-color: #BBBB00;
 }
 
 html,
@@ -44,11 +45,12 @@ img {
 }
 
 .hexagon-container {
+    position: relative;
+    margin-top: 13%;
+    margin-right: 67%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* display: grid; */
-    
 }
 
 .hive-upper-row {
@@ -80,7 +82,7 @@ img {
     left: var(--hex-left);
     width: 100px;
     height: 57.735px;
-    background-color: #6C757D;
+    background-color: var(--hex-color);
     margin: 28.87px 0;
   }
   
@@ -95,13 +97,13 @@ img {
   
   .hexagon:before {
     bottom: 100%;
-    border-bottom: 28.87px solid #6C757D;
+    border-bottom: 28.87px solid var(--hex-color);
   }
   
   .hexagon:after {
     top: 100%;
     width: 0;
-    border-top: 28.87px solid #6C757D;
+    border-top: 28.87px solid var(--hex-color);
   }
   
   .inner {
@@ -111,8 +113,9 @@ img {
     right: 0;
     transform: translateY(-50%);
     text-align: center;
-    color: #fff;
-    font-size: 18px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
   }
 
 #hexagon-0 {

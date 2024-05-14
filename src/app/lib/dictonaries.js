@@ -80,7 +80,21 @@ const turkish_dictionary = {
         ],
 }
 
+const english_letters_sorted_by_frequency = [
+                                                'S', 'E', 'A', 'O', 'R', 'I', 'L', 'T', 'N', 'D',
+                                                'U', 'C', 'P', 'Y', 'M', 'H', 'G', 'B', 'K', 'F',
+                                                'W', 'V', 'Z', 'X', 'J', 'Q'
+                                            ]
+
+const turkish_letters_sorted_by_frequency = [
+                                                'A', 'E', 'K', 'İ', 'L', 'M', 'R', 'N', 'T', 'I',
+                                                'S', 'U', 'Y', 'D', 'O', 'B', 'Ü', 'Ş', 'Z', 'G',
+                                                'Ç', 'P', 'H', 'C', 'V', 'Ğ', 'Ö', 'F', 'J'
+                                            ]
+
 module.exports = {
     english_dictionary,
     turkish_dictionary,
+    english_letters_sorted_by_frequency,
+    turkish_letters_sorted_by_frequency,
 };
