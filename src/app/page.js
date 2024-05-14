@@ -2,6 +2,7 @@ import Image from "next/image";
 import { english_dictionary, turkish_dictionary } from "./lib/dictonaries";
 import React from 'react';
 import Hive from './ui/Hive';
+import './styles/global.css';
 
 export default function Home() {
 

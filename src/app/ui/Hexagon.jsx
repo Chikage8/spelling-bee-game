@@ -1,10 +1,13 @@
 import React from 'react';
-import styles from './Hexagon.module.css';
+// import styles from './Hexagon.module.css';
 
-const Hexagon = ({ children }) => {
+const Hexagon = ({ children, id }) => {
+
+  console.log(id)
+
   return (
-    <div className={styles.hexagon}>
-      <div className={styles.inner}>
+    <div className="hexagon" id={id}>
+      <div className="inner">
         {children}
       </div>
     </div>
