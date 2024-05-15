@@ -1,19 +1,20 @@
 'use client'
 
 import React from 'react'
+import { shuffleWord } from '../page';
 
-const Buttons = () => {
-    function handleDelete(e) {
+const Buttons = (props) => {
+    function handleDelete() {
         document.getElementById("input-text").value = "";
-      }
+    }
     
-      function handleShuffle(e) {
-        
-      }
+    function handleShuffle() {
+        props.childSetWord(shuffleWord(props.word, props.center_letter));
+    }
     
-      function handleEnter(e) {
+    function handleEnter() {
         
-      }
+    }
         
     return (
         <div id="button-container">

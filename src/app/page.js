@@ -5,6 +5,57 @@ import Hive from './ui/Hive';
 import './styles/global.css';
 import Buttons from "./ui/Buttons";
 
+export function shuffleWord(word, center_letter) {
+  if (!center_letter) {
+    console.log("shuffleWord function requires center_letter to be defined");
+    return;
+  }
+
+  // let word_array = [];
+  // // if word is a string convert it to an array
+  // if (typeof word === "string") {
+  //   for(let i = 0; i < word.length; i++) {
+  //     word_array.push(word.charAt(i));
+  //   }
+  // } else {
+  //   word_array = word;
+  // }
+  
+  let shuffledWord = [];
+
+  // Find the center letter, place it on the middle of the shuffledWord and remove it from the original word
+  shuffledWord[3] = center_letter;
+  word = word.replace(center_letter, "");
+
+  console.log("After center_letter operations... shuffledWord: ", shuffledWord, " word: ", word);
+
+  // Shuffle the rest of the word by placing random letters from the to the shuffledWord excluding index 3 which holds the center letter
+  console.log("shuffling")
+  let shuffledWordIndex = 0;
+  while (word.length > 0) {
+    const randomLetter = word.charAt(Math.floor(Math.random() * word.length));
+
+    console.log("randomLetter: ", randomLetter)
+    console.log("shuffledWordIndex: ", shuffledWordIndex)
+
+    shuffledWord[shuffledWordIndex] =randomLetter;
+    word = word.replace(randomLetter, "");
+
+    console.log("shuffledWord", shuffledWord)
+
+    if (shuffledWordIndex !== 2) {
+      shuffledWordIndex++;
+    } else {
+      shuffledWordIndex+=2;
+    }
+  }
+
+  let shuffledWordStr = shuffledWord.join("");
+
+
+  return shuffledWordStr;
+}
+
 export default function Home() {
   let language = "en-US"; // either en-US or TR case by case
   
@@ -25,57 +76,6 @@ export default function Home() {
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
-
-  function shuffleWord(word) {
-    if (!center_letter) {
-      console.log("generateLettersArray function requires center_letter to be defined");
-      return;
-    }
-
-    // let word_array = [];
-    // // if word is a string convert it to an array
-    // if (typeof word === "string") {
-    //   for(let i = 0; i < word.length; i++) {
-    //     word_array.push(word.charAt(i));
-    //   }
-    // } else {
-    //   word_array = word;
-    // }
-    
-    let shuffledWord = [];
-
-    // Find the center letter, place it on the middle of the shuffledWord and remove it from the original word
-    shuffledWord[3] = center_letter;
-    word = word.replace(center_letter, "");
-
-    console.log("After center_letter operations... shuffledWord: ", shuffledWord, " word: ", word);
-
-    // Shuffle the rest of the word by placing random letters from the to the shuffledWord excluding index 3 which holds the center letter
-    console.log("shuffling")
-    let shuffledWordIndex = 0;
-    while (word.length > 0) {
-      const randomLetter = word.charAt(Math.floor(Math.random() * word.length));
-
-      console.log("randomLetter: ", randomLetter)
-      console.log("shuffledWordIndex: ", shuffledWordIndex)
-
-      shuffledWord[shuffledWordIndex] =randomLetter;
-      word = word.replace(randomLetter, "");
-
-      console.log("shuffledWord", shuffledWord)
-
-      if (shuffledWordIndex !== 2) {
-        shuffledWordIndex++;
-      } else {
-        shuffledWordIndex+=2;
-      }
-    }
-
-    let shuffledWordStr = shuffledWord.toString();
-
-
-    return shuffledWord;
   }
 
   function pickMostCommonLetter(letters) {
@@ -101,13 +101,22 @@ export default function Home() {
   const randomWordIndex = getRandomInt(dictionary[7].length);
   const word = dictionary[7][randomWordIndex].toLocaleUpperCase('en-US');
 
+  console.log("word: ", word);
+
   // Pick the most common letter
   const center_letter = pickMostCommonLetter(word);
+  console.log("************************", center_letter)
 
   // Create the letters array of the random word
-  const shuffledWord = shuffleWord(word);
+  // let shuffledWord = "";
+  // shuffleWord(word, center_letter).then(word => {
+    // shuffledWord = word
+  // });
+  let shuffledWord = shuffleWord(word, center_letter);
 
-  console.log(shuffleWord);
+  console.log("shuffledWord: ", shuffledWord);
+
+  console.log(shuffledWord);
   console.log(center_letter);
   
   return (
@@ -115,9 +124,9 @@ export default function Home() {
         {/* <input type="text"></input> */}
         <input type="text" id="input-text" placeholder="Click the Below Letters"></input>
 
-        <Hive shuffledWord={shuffledWord}></Hive>
+        <Hive shuffledWord={shuffledWord} center_letter={center_letter}></Hive>
 
-        <Buttons />
+        
 
     </main>
   );
