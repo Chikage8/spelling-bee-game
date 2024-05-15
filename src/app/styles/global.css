@@ -46,10 +46,11 @@ img {
 
 .hexagon-container {
     position: relative;
-    margin-top: 13%;
-    margin-right: 67%;
+    margin-right: 55.4vw;
+    margin-top: 2vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -118,30 +119,21 @@ img {
     font-weight: 700;
   }
 
-#hexagon-0 {
-    
-}
+  #input-text {
+    position: relative;
+    margin-right: 52vw;
+    margin-top: 23vh;
+  }
 
-#hexagon-1 {
-  /* margin-bottom: 100px; */
-}
+  #button-container {
+    display: flex;
+    gap: 1vw;
+    margin-right: 52vw;
+  }
 
-#hexagon-2 {
-    
-}
-
-#hexagon-3 {
-    
-}
-
-#hexagon-4 {
-    
-}
-
-#hexagon-5 {
-    
-}
-
-#hexagon-6 {
-    
-}
+  #button-container button{
+    display: flex;
+    gap: 1vw;
+    border: solid black;
+    padding: 1%;
+  }

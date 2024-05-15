@@ -4,9 +4,9 @@ import React from 'react';
 // import styles from './Hexagon.module.css';
 
 const Hexagon = ({ children, id }) => {
-
   function handleHexClick(e) {
     console.log(e.target.innerHTML[9]);
+    document.getElementById("input-text").value += e.target.innerHTML[9];
   }
 
   return (

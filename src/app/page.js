@@ -3,9 +3,10 @@ import { english_dictionary, turkish_dictionary, english_letters_sorted_by_frequ
 import React from 'react';
 import Hive from './ui/Hive';
 import './styles/global.css';
+import Buttons from "./ui/Buttons";
 
 export default function Home() {
-  let language = "en-US";
+  let language = "en-US"; // either en-US or TR case by case
   
   let dictionary;
   let letters_sorted_by_frequency;
@@ -110,11 +111,14 @@ export default function Home() {
   console.log(center_letter);
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center p-0">
         {/* <input type="text"></input> */}
-        <div><p></p></div>
+        <input type="text" id="input-text" placeholder="Click the Below Letters"></input>
 
         <Hive shuffledWord={shuffledWord}></Hive>
+
+        <Buttons />
+
     </main>
   );
 }
