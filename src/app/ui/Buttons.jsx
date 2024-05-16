@@ -2,8 +2,35 @@
 
 import React from 'react'
 import { shuffleWord } from '../page';
+import { english_dictionary, turkish_dictionary, english_letters_sorted_by_frequency, turkish_letters_sorted_by_frequency } from "../lib/dictonaries";
 
 const Buttons = (props) => {
+    let language = props.language;
+    let dictionary;
+
+    if (language === "en-US") {
+        dictionary = english_dictionary;
+    } else if (language === "TR") {
+        dictionary = turkish_dictionary;
+    } else {
+        throw new Error('The current language is not supported, please select one of the languages from the dropdown');
+    }
+
+    const checkWord = () => {
+        let word = document.getElementById("input-text").value;
+        alert(word);
+        alert(typeof dictionary)
+        alert("dictionary.length: ", dictionary.length)
+        for (let i = 0; i < dictionary[word.length].length; i++) {
+            console.log(dictionary[word.length][i])
+        }
+        if (dictionary[word.length].includes(word)) {
+            alert("Correct Word");
+        } else {
+            alert("WRONG WORD BRUH!");
+        }
+    }
+
     const handleDelete = (e) => {
         // alert("Delete Clicked")
         let word = document.getElementById("input-text").value
@@ -16,9 +43,8 @@ const Buttons = (props) => {
     }
     
     const handleEnter = (e) => {
-        alert("Enter Clicked")
+        checkWord();
     }
-
         
     return (
         <div id='button-container' className='flex gap-1 ml-9'>

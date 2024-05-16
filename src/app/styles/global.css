@@ -150,9 +150,8 @@ img {
   font-weight: 700;
 }
 
-#found-words-container {
-  position: relative;
-}
+/* #found-words-container {
+} */
 
 /* #delete-button {
   gap: 1vw;

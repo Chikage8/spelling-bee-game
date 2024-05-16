@@ -13,16 +13,6 @@ export function shuffleWord(word, center_letter) {
     return;
   }
 
-  // let word_array = [];
-  // // if word is a string convert it to an array
-  // if (typeof word === "string") {
-  //   for(let i = 0; i < word.length; i++) {
-  //     word_array.push(word.charAt(i));
-  //   }
-  // } else {
-  //   word_array = word;
-  // }
-  
   let shuffledWord = [];
 
   // Find the center letter, place it on the middle of the shuffledWord and remove it from the original word
@@ -60,7 +50,7 @@ export function shuffleWord(word, center_letter) {
 
 export default function Home() {
   let language = "en-US"; // either en-US or TR case by case
-  
+
   let dictionary;
   let letters_sorted_by_frequency;
 
@@ -123,8 +113,8 @@ export default function Home() {
   
   return (
     <div className="flex flex-row justify-start items-start pt-64 pl-52" id="game-container">
-      <InputSide shuffledWord={shuffledWord} center_letter={center_letter}/>
-      <OutputSide />
+      <InputSide shuffledWord={shuffledWord} center_letter={center_letter} language={language}/>
+      <OutputSide language={language}/>
     </div>
   );
 }

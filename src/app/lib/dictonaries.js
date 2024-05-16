@@ -1,82 +1,81 @@
 // Object containing english words of different length
 const english_dictionary = {
     2:  [
-            'At', 'Be', 'Do', 'Go', 'Hi', 'If', 'In', 'Is', 'It', 'Me',
-            'My', 'No', 'Of', 'Oh', 'On', 'Or', 'Ow', 'To', 'Up', 'We',
-            'Am', 'An', 'As', 'By', 'So', 'Us', 'Ox', 'Ex', 'Qi'
+            'AT', 'BE', 'DO', 'GO', 'HI', 'IF', 'IN', 'IS', 'IT', 'ME',
+            'MY', 'NO', 'OF', 'OH', 'ON', 'OR', 'OW', 'TO', 'UP', 'WE',
+            'AM', 'AN', 'AS', 'BY', 'SO', 'US', 'OX', 'EX', 'QI'
         ],
     3:  [
-            'Age', 'Air', 'Arm', 'Art', 'Bat', 'Big', 'Box', 'Bus', 'Cat', 'Cow',
-            'Cry', 'Day', 'Dog', 'Ear', 'Eat', 'Egg', 'End', 'Eye', 'Fan', 'Far',
-            'Fix', 'Fly', 'Fox', 'Fun', 'Gas', 'Get', 'Gun', 'Hat', 'Hot', 'Ice',
-            'Ink', 'Jar', 'Job', 'Joy', 'Key', 'Kid', 'Leg', 'Lid', 'Log', 'Man',
-            'Map', 'Mat', 'Mix', 'Net', 'Now', 'Pen', 'Pie', 'Pot', 'Run', 'Sky'
+            'AGE', 'AIR', 'ARM', 'ART', 'BAT', 'BIG', 'BOX', 'BUS', 'CAT', 'COW',
+            'CRY', 'DAY', 'DOG', 'EAR', 'EAT', 'EGG', 'END', 'EYE', 'FAN', 'FAR',
+            'FIX', 'FLY', 'FOX', 'FUN', 'GAS', 'GET', 'GUN', 'HAT', 'HOT', 'ICE',
+            'INK', 'JAR', 'JOB', 'JOY', 'KEY', 'KID', 'LEG', 'LID', 'LOG', 'MAN',
+            'MAP', 'MAT', 'MIX', 'NET', 'NOW', 'PEN', 'PIE', 'POT', 'RUN', 'SKY'
         ],
     4:  [
-            'Airy', 'Bark', 'Blue', 'Book', 'Bud', 'Calm', 'Cute', 'Dark', 'Dawn', 'Deep',
-            'Dusk', 'Fall', 'Fast', 'Fine', 'Fire', 'Flow', 'Free', 'Glow', 'Gold', 'Good',
-            'Gray', 'Grip', 'Hope', 'Iron', 'Jade', 'Just', 'Lush', 'Moon', 'Neat', 'Open',
-            'Peak', 'Pink', 'Play', 'Rain', 'Read', 'Rose', 'Ruby', 'Salt', 'Save', 'Snow',
-            'Soft', 'Star', 'Tall', 'True', 'Warm', 'Wave', 'Wind', 'Wise', 'Word', 'Work'
+            'AIRY', 'BARK', 'BLUE', 'BOOK', 'BUD', 'CALM', 'CUTE', 'DARK', 'DAWN', 'DEEP',
+            'DUSK', 'FALL', 'FAST', 'FINE', 'FIRE', 'FLOW', 'FREE', 'GLOW', 'GOLD', 'GOOD',
+            'GRAY', 'GRIP', 'HOPE', 'IRON', 'JADE', 'JUST', 'LUSH', 'MOON', 'NEAT', 'OPEN',
+            'PEAK', 'PINK', 'PLAY', 'RAIN', 'READ', 'ROSE', 'RUBY', 'SALT', 'SAVE', 'SNOW',
+            'SOFT', 'STAR', 'TALL', 'TRUE', 'WARM', 'WAVE', 'WIND', 'WISE', 'WORD', 'WORK'
         ],
     5:  [
-            'Angel', 'Beach', 'Berry', 'Black', 'Blade', 'Blush', 'Broom', 'Brush', 'Candy', 'Witch', 
-            'Charm', 'Chill', 'Cloud', 'Crane', 'Creek', 'Crown', 'Dream', 'Dress', 'Dusty', 'Earth',
-            'Fairy', 'Faith', 'Frost', 'Gleam', 'Windy', 'Grace', 'Happy', 'Heart', 'Jewel', 'Magic',
-            'Misty', 'Ocean', 'Peace', 'Petal', 'Quiet', 'Rainy', 'Ridge', 'Shine', 'Smile', 'Spark',
-            'Storm', 'Sweet', 'Tower', 'Trick', 'Trust', 'Whirl', 'Whisk'
+            'ANGEL', 'BEACH', 'BERRY', 'BLACK', 'BLADE', 'BLUSH', 'BROOM', 'BRUSH', 'CANDY', 'WITCH', 
+            'CHARM', 'CHILL', 'CLOUD', 'CRANE', 'CREEK', 'CROWN', 'DREAM', 'DRESS', 'DUSTY', 'EARTH',
+            'FAIRY', 'FAITH', 'FROST', 'GLEAM', 'WINDY', 'GRACE', 'HAPPY', 'HEART', 'JEWEL', 'MAGIC',
+            'MISTY', 'OCEAN', 'PEACE', 'PETAL', 'QUIET', 'RAINY', 'RIDGE', 'SHINE', 'SMILE', 'SPARK',
+            'STORM', 'SWEET', 'TOWER', 'TRICK', 'TRUST', 'WHIRL', 'WHISK'
         ],
     6:  [
-            'Planet', 'Doctor', 'Market', 'Yellow', 'Rocket', 'Banana', 'Mother', 'Method', 'Bright', 'Window', 
-            'Spirit', 'Forest', 'Purple', 'Winter', 'Guitar', 'Bridge', 'Castle', 'Summer', 'Silver', 'Saddle', 
-            'Laptop', 'Wisdom', 'Orphan', 'Cheese', 'Tennis', 'Puzzle', 'Bottle', 'Carrot', 'Sponge', 'Church', 
-            'Shadow', 'Cactus', 'Desert', 'Meadow', 'Temple', 'Candle', 'Tunnel', 'Dinner', 'School', 'Monkey', 
-            'Pirate', 'Rabbit', 'Cannon', 'Lizard', 'Ticket', 'Napkin', 'Falcon', 'Tomato', 'Jacket', 'Pencil', 
-            'Helmet', 'Ribbon', 'Carpet', 'Plague', 'Hammok',  
+            'PLANET', 'DOCTOR', 'MARKET', 'YELLOW', 'ROCKET', 'BANANA', 'MOTHER', 'METHOD', 'BRIGHT', 'WINDOW', 
+            'SPIRIT', 'FOREST', 'PURPLE', 'WINTER', 'GUITAR', 'BRIDGE', 'CASTLE', 'SUMMER', 'SILVER', 'SADDLE', 
+            'LAPTOP', 'WISDOM', 'ORPHAN', 'CHEESE', 'TENNIS', 'PUZZLE', 'BOTTLE', 'CARROT', 'SPONGE', 'CHURCH', 
+            'SHADOW', 'CACTUS', 'DESERT', 'MEADOW', 'TEMPLE', 'CANDLE', 'TUNNEL', 'DINNER', 'SCHOOL', 'MONKEY', 
+            'PIRATE', 'RABBIT', 'CANNON', 'LIZARD', 'TICKET', 'NAPKIN', 'FALCON', 'TOMATO', 'JACKET', 'PENCIL', 
+            'HELMET', 'RIBBON', 'CARPET', 'PLAGUE', 'HAMMOK',  
         ],
     7:  [   
-            'Captain', 'Mystery', 'Freedom', 'Silence', 'Library', 'Weather', 'Antenna', 'Justice', 'Perform', 'Journey',
-            'Failure', 'Account', 'Stylish', 'Typhoon', 'Country', 'Bicycle', 'Curtain', 'Concert', 'Natural', 'Silence',
-            'Penguin', 'Organic', 'Shelter', 'Cunning', 'Diamond', 'Husband', 'Academy', 'Contest', 'Powerful', 'Connect',
-            'Preview', 'Thunder', 'Suspend', 'Quality', 'Machine', 'Proceed', 'Forward', 'Explore', 'Comfort', 'Against',
-            'Reflect', 'Balance', 'Picture', 'Problem', 'Perfect', 'Prepare', 'Village', 'Require', 'Passion', 'Display'
+            'CAPTAIN', 'MYSTERY', 'FREEDOM', 'SILENCE', 'LIBRARY', 'WEATHER', 'ANTENNA', 'JUSTICE', 'PERFORM', 'JOURNEY',
+            'FAILURE', 'ACCOUNT', 'STYLISH', 'TYPHOON', 'COUNTRY', 'BICYCLE', 'CURTAIN', 'CONCERT', 'NATURAL', 'SILENCE',
+            'PENGUIN', 'ORGANIC', 'SHELTER', 'CUNNING', 'DIAMOND', 'HUSBAND', 'ACADEMY', 'CONTEST', 'POWERFUL', 'CONNECT',
+            'PREVIEW', 'THUNDER', 'SUSPEND', 'QUALITY', 'MACHINE', 'PROCEED', 'FORWARD', 'EXPLORE', 'COMFORT', 'AGAINST',
+            'REFLECT', 'BALANCE', 'PICTURE', 'PROBLEM', 'PERFECT', 'PREPARE', 'VILLAGE', 'REQUIRE', 'PASSION', 'DISPLAY'
         ],
 }
 
 const turkish_dictionary = {
     2:  [
-            'Ağ', 'Ak', 'Al', 'Av', 'At', 'Ay', 'Az', 'Ek', 'En', 'Er',
-            'El', 'Et', 'Ev', 'Ey'
+            'AĞ', 'AK', 'AL', 'AV', 'AT', 'AY', 'AZ', 'EK', 'EN', 'ER',
+            'EL', 'ET', 'EV', 'EY'
         ],
     3:  [
-            'Sağ', 'Sol', 'Cem', 'Bal', 'Dil', 'Fır', 'Göl', 'Han', 'Jön', 'Kaş',
-            'Göz', 'Day', 'Lal', 'Nar', 'Örü', 'Şap', 'Tat', 'Var', 'Fan', 'Yıl',
-            'Zor', 'Fön', 'Hız', 'Kul', 'Mor', 'Pür', 'Boy'
+            'SAĞ', 'SOL', 'CEM', 'BAL', 'DİL', 'FIR', 'GÖL', 'HAN', 'JÖN', 'KAŞ',
+            'GÖZ', 'DAY', 'LAL', 'NAR', 'ÖRÜ', 'ŞAP', 'TAT', 'VAR', 'FAN', 'YIL',
+            'ZOR', 'FÖN', 'HIZ', 'KUL', 'MOR', 'PÜR', 'BOY'
         ],
     4:  [
-            'Ağıt', 'Bakı', 'Cıva', 'Evli', 'Fani', 'Gemi', 'Jale', 'Kara', 'Nane', 'Ölçü',
-            'Paha', 'Şişe', 'Vazo', 'Yama', 'Füze', 'Hafi', 'Kaba', 'Masa', 'Önem', 'Pire',
-            'Fare', 'Grip', 'Rota', 'Taze', 'Üçer', 'Vana', 'Yaya', 'Araç', 'Akıl', 'Zeka',
-            'Doğu', 'Batı', 'Hane', 'İnek', 'Etli'
+            'AĞIT', 'BAKI', 'CIVA', 'EVLİ', 'FANİ', 'GEMİ', 'JALE', 'KARA', 'NANE', 'ÖLÇÜ',
+            'PAHA', 'ŞİŞE', 'VAZO', 'YAMA', 'FÜZE', 'HAFİ', 'KABA', 'MASA', 'ÖNEM', 'PİRE',
+            'FARE', 'GRİP', 'ROTA', 'TAZE', 'ÜÇER', 'VANA', 'YAYA', 'ARAÇ', 'AKIL', 'ZEKA',
+            'DOĞU', 'BATI', 'HANE', 'İNEK', 'ETLİ'
         ],
     5:  [
-            'Dönem', 'Zorlu', 'Yakın', 'Görev', 'Karşı', 'Duygu', 'Dürüm', 'Anlam', 'Korku', 'Yayın', 
-            'Dolap', 'Kıvam', 'Geliş', 'Gidiş', 'Yıkım', 'Sanrı', 'Görüş', 'Süreç', 'Zorlu', 'Güçlü',
-            'Cevap', 'Görme', 'Hesap', 'Keşke', 'Kibar', 'Bayat', 'Araba', 'Erkek', 'Kadın', 'Kuzey', 
-            'Güney'
+            'DÖNEM', 'ZORLU', 'YAKIN', 'GÖREV', 'KARŞI', 'DUYGU', 'DÜRÜM', 'ANLAM', 'KORKU', 'YAYIN', 
+            'DOLAP', 'KIVAM', 'GELİŞ', 'GIDİŞ', 'YIKIM', 'SANRI', 'GÖRÜŞ', 'SÜREÇ', 'ZORLU', 'GÜÇLÜ',
+            'CEVAP', 'GÖRME', 'HESAP', 'KEŞKE', 'KİBAR', 'BAYAT', 'ARABA', 'ERKEK', 'KADIN', 'KUZEY', 
+            'GÜNEY'
         ],
     6:  [
-            'Görücü', 'Yırtık', 'Gömlek', 'Düşman', 'Zengin', 'Yaprak', 'Kıymet', 'Yıkıcı', 'Keskin', 'Gerçek', 
-            'Merkez', 'Kısmet', 'Kavram', 'Kırıcı', 'Sürgün', 'Esaslı', 'Meşgul', 'Fırsat', 'Güçsüz', 'Bakıcı',
-            'Hatıra', 'Nankör', 'Rafine', 'Şöhret', 'Tevfik', 'Vitrin', 'Yaşama', 'Hırsız', 'Sağlam', 'Pahalı',
-            'Önemli', 'Pireli'
+            'GÖRÜCÜ', 'YIRTIK', 'GÖMLEK', 'DÜŞMAN', 'ZENGIN', 'YAPRAK', 'KIYMET', 'YIKICI', 'KESKIN', 'GERÇEK', 
+            'MERKEZ', 'KISMET', 'KAVRAM', 'KIRICI', 'SÜRGÜN', 'ESASLI', 'MEŞGUL', 'FIRSAT', 'GÜÇSÜZ', 'BAKICI',
+            'HATIRA', 'NANKÖR', 'RAFİNE', 'ŞÖHRET', 'TEVFİK', 'VİTRİN', 'YAŞAMA', 'HIRSIZ', 'SAĞLAM', 'PAHALI',
+            'ÖNEMLİ', 'PİRELİ'
         ],
     7:  [   
-            'Dolapçı', 'Çalışma', 'Gelişim', 'Değerli', 'Havasız', 'Yaşamak', 'İmtiyaz', 'Kavrama', 'Gömülme', 'Kelepçe', 
-            'Merkezi', 'Kırmızı', 'Santral', 'Fırlama', 'Sürekli', 'Kıyamet', 'Anlamak', 'Zorlama', 'Devamlı', 'Köpüklü',
-            'Uzaklık', 'Gürültü', 'Fırtına', 'Şüpheci', 'İhtimal', 'İrtibat', 'Görüşme', 'Kesikli', 'Serbest', 'İhtiyaç',
-            'Önemsiz', 'Hanedan'
-
+            'DOLAPÇI', 'ÇALIŞMA', 'GELİŞİM', 'DEĞERLİ', 'HAVASIZ', 'YAŞAMAK', 'İMTİYAZ', 'KAVRAMA', 'GÖMÜLME', 'KELEPÇE', 
+            'MERKEZİ', 'KIRMIZI', 'SANTRAL', 'FIRLAMA', 'SÜREKLİ', 'KIYAMET', 'ANLAMAK', 'ZORLAMA', 'DEVAMLI', 'KÖPÜKLÜ',
+            'UZAKLIK', 'GÜRÜLTÜ', 'FIRTINA', 'ŞÜPHECİ', 'İHTİMAL', 'İRTİBAT', 'GÖRÜŞME', 'KESİKLİ', 'SERBEST', 'İHTİYAÇ',
+            'ÖNEMSİZ', 'HANEDAN'
         ],
 }
 
