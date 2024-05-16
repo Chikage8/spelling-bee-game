@@ -3,6 +3,7 @@ import { english_dictionary, turkish_dictionary, english_letters_sorted_by_frequ
 import React from 'react';
 import Hive from './ui/Hive';
 import './styles/global.css';
+import ClientTopLevelComponent from "./ui/ClientTopLevelComponent";
 import Buttons from "./ui/Buttons";
 import InputSide from "./ui/InputSide";
 import OutputSide from "./ui/OutputSide";
@@ -12,6 +13,10 @@ export function shuffleWord(word, center_letter) {
     console.log("shuffleWord function requires center_letter to be defined");
     return;
   }
+
+  console.log("SHUFFLING");
+  console.log("word: ", word);
+  console.log("center_letter: ", center_letter);
 
   let shuffledWord = [];
 
@@ -50,18 +55,23 @@ export function shuffleWord(word, center_letter) {
 
 export default function Home() {
   let language = "en-US"; // either en-US or TR case by case
-
+  console.log("language: ", language)
   let dictionary;
   let letters_sorted_by_frequency;
 
   function setDictionaryAndFrequentLetters(language) {
+    console.log("language: ", language)
+    console.log('"en-US": ', "en-US")
+    console.log('language === "en-US": ', language === "en-US");
     if (language === "en-US") {
+      console.log("ENTERS IF")
       dictionary = english_dictionary;
       letters_sorted_by_frequency = english_letters_sorted_by_frequency
     } else if (language === "TR") {
       dictionary = turkish_dictionary;
       letters_sorted_by_frequency = turkish_letters_sorted_by_frequency;
     } else {
+      console.log("ENTERS ELSE")
       throw new Error('The current language is not supported, please select one of the languages from the dropdown');
     }
   }
@@ -112,9 +122,8 @@ export default function Home() {
   console.log(center_letter);
   
   return (
-    <div className="flex flex-row justify-start items-start pt-64 pl-52" id="game-container">
-      <InputSide shuffledWord={shuffledWord} center_letter={center_letter} language={language}/>
-      <OutputSide language={language}/>
-    </div>
+    <main>
+      <ClientTopLevelComponent shuffledWord={shuffledWord} center_letter={center_letter} language={language}/>
+    </main>
   );
 }

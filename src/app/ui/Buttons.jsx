@@ -5,12 +5,11 @@ import { shuffleWord } from '../page';
 import { english_dictionary, turkish_dictionary, english_letters_sorted_by_frequency, turkish_letters_sorted_by_frequency } from "../lib/dictonaries";
 
 const Buttons = (props) => {
-    let language = props.language;
     let dictionary;
 
-    if (language === "en-US") {
+    if (props.clientLanguage === "en-US") {
         dictionary = english_dictionary;
-    } else if (language === "TR") {
+    } else if (props.clientLanguage === "TR") {
         dictionary = turkish_dictionary;
     } else {
         throw new Error('The current language is not supported, please select one of the languages from the dropdown');
@@ -18,9 +17,6 @@ const Buttons = (props) => {
 
     const checkWord = () => {
         let word = document.getElementById("input-text").value;
-        alert(word);
-        alert(typeof dictionary)
-        alert("dictionary.length: ", dictionary.length)
         for (let i = 0; i < dictionary[word.length].length; i++) {
             console.log(dictionary[word.length][i])
         }
@@ -39,7 +35,7 @@ const Buttons = (props) => {
     }
     
     const handleShuffle = (e) => {
-        props.childSetWord(shuffleWord(props.word, props.center_letter));
+        props.childSetClientShuffledWord(shuffleWord(props.clientShuffledWord, props.clientCenterLetter));
     }
     
     const handleEnter = (e) => {
