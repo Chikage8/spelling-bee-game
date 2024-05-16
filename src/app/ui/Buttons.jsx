@@ -7,7 +7,7 @@ const Buttons = (props) => {
     const handleDelete = (e) => {
         // alert("Delete Clicked")
         let word = document.getElementById("input-text").value
-        word = word.replace(word.charAt(word.length - 1), "");
+        word = word.substring(0, word.length - 1);
         document.getElementById("input-text").value = word;
     }
     
