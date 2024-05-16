@@ -4,6 +4,8 @@ import React from 'react';
 import Hive from './ui/Hive';
 import './styles/global.css';
 import Buttons from "./ui/Buttons";
+import InputSide from "./ui/InputSide";
+import OutputSide from "./ui/OutputSide";
 
 export function shuffleWord(word, center_letter) {
   if (!center_letter) {
@@ -120,14 +122,9 @@ export default function Home() {
   console.log(center_letter);
   
   return (
-    <main className="flex min-h-screen flex-col items-center p-0">
-        {/* <input type="text"></input> */}
-        <input type="text" id="input-text" placeholder="Click the Below Letters"></input>
-
-        <Hive shuffledWord={shuffledWord} center_letter={center_letter}></Hive>
-
-        
-
-    </main>
+    <div className="flex flex-row justify-start items-start pt-64 pl-52" id="game-container">
+      <InputSide shuffledWord={shuffledWord} center_letter={center_letter}/>
+      <OutputSide />
+    </div>
   );
 }

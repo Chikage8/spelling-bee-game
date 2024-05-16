@@ -44,27 +44,58 @@ img {
   display: block;
 }
 
-.hexagon-container {
-    position: relative;
-    margin-right: 55.4vw;
-    margin-top: 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+#game-container {
+  /* display: flex; */
 }
+
+#input-side-container{
+    /* margin-right: 52vw; */
+    /* margin-top: 30vh; */
+}
+
+#input-text {
+  position: relative;
+  margin-left: 3.3vw;
+  /* margin-bottom: 2.5vh; */
+}
+
+.hive-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: min-content;
+  width: min-content;
+}
+
+/* .button-container { */
+  /* display: flex; */
+  /* gap: 1vw; */
+  /* margin-left: 1.5vw; */
+  /* margin-top: -15%; */
+/* } */
+
+/* .button-container button{
+  gap: 1vw;
+  border: solid black;
+  padding: 1%;
+} */
+
 
 .hive-upper-row {
     display: flex;
     gap: 2%;
     width: 67%;
     margin-left: 6%;
+    margin-bottom: -25px;
 }
 
 .hive-middle-row {
     display: flex;
     gap: 1%;
-    transform: translate(0, -25px);
+    margin-bottom: -25px;
+    /* transform: translate(0, -25px); */
 }
 
 .hive-lower-row {
@@ -72,68 +103,71 @@ img {
     gap: 1%;
     width: 67%;
     margin-left: 6%;
-    transform: translate(0, -50px);
+    /* transform: translate(0, -50px); */
 }
 
 .hexagon {
-    position: relative;
-    top: var(--hex-top);
-    right: var(--hex-right);
-    bottom: var(--hex-bottom);
-    left: var(--hex-left);
-    width: 100px;
-    height: 57.735px;
-    background-color: var(--hex-color);
-    margin: 28.87px 0;
-  }
+  position: relative;
+  top: var(--hex-top);
+  right: var(--hex-right);
+  bottom: var(--hex-bottom);
+  left: var(--hex-left);
+  width: 100px;
+  height: 57.735px;
+  background-color: var(--hex-color);
+  margin: 28.87px 0;
+}
   
-  .hexagon:before,
-  .hexagon:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-  }
-  
-  .hexagon:before {
-    bottom: 100%;
-    border-bottom: 28.87px solid var(--hex-color);
-  }
-  
-  .hexagon:after {
-    top: 100%;
-    width: 0;
-    border-top: 28.87px solid var(--hex-color);
-  }
-  
-  .inner {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #000000;
-    font-size: 24px;
-    font-weight: 700;
-  }
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
 
-  #input-text {
-    position: relative;
-    margin-right: 52vw;
-    margin-top: 23vh;
-  }
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 28.87px solid var(--hex-color);
+}
 
-  #button-container {
-    display: flex;
-    gap: 1vw;
-    margin-right: 52vw;
-  }
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 28.87px solid var(--hex-color);
+}
 
-  #button-container button{
-    display: flex;
-    gap: 1vw;
-    border: solid black;
-    padding: 1%;
-  }
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#found-words-container {
+  position: relative;
+}
+
+/* #delete-button {
+  gap: 1vw;
+  border: solid black;
+  padding: 1%;
+}
+
+#shuffle-button {
+  gap: 1vw;
+  border: solid black;
+  padding: 1%;
+}
+
+#enter-button {
+  gap: 1vw;
+  border: solid black;
+  padding: 1%;
+} */
