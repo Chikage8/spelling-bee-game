@@ -27,6 +27,7 @@ const Buttons = (props) => {
                 alert("You have already found this word!");
             } else {
                 // Add correctly found word to clientCorrectWords array
+                props.setScore(props.score + word.length);
                 props.childSetClientCorrectWords(word);
                 console.log("props.clientCorrectWords: ", props.clientCorrectWords)
                 console.log("props.clientCorrectWords[0]: ", props.clientCorrectWords[0])
@@ -34,6 +35,7 @@ const Buttons = (props) => {
         } else {
             alert("WRONG WORD BRUH!");
         }
+        document.getElementById("input-text").value = "";
     }
 
     const handleDelete = (e) => {

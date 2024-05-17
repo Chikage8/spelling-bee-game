@@ -6,6 +6,7 @@ import InputSide from './InputSide'
 import OutputSide from './OutputSide'
 
 const ClientTopLevelComponent = (props) => {
+    const [score, setScore] = useState(0);
 
     const [clientShuffledWord, setClientShuffledWord] = useState(props.shuffledWord);
     const [clientCenterLetter, setClientCenterLetter] = useState(props.center_letter);
@@ -33,8 +34,8 @@ const ClientTopLevelComponent = (props) => {
 
     return (
         <div className="flex flex-row justify-start items-start pt-64 pl-52" id="game-container">
-            <InputSide clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientCenterLetter={clientCenterLetter} clientLanguage={clientLanguage} childSetClientShuffledWord={childSetClientShuffledWord}/>
-            <OutputSide clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientLanguage={clientLanguage}/>
+            <InputSide score={score} setScore={setScore} clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientCenterLetter={clientCenterLetter} clientLanguage={clientLanguage} childSetClientShuffledWord={childSetClientShuffledWord}/>
+            <OutputSide score={score} setScore={setScore} clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientLanguage={clientLanguage}/>
     </div>
     )
 }
