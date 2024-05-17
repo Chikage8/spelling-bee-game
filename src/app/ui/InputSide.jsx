@@ -19,7 +19,7 @@ const InputSide = (props) => {
         <div className="flex min-h-screen flex-col items-center gap-3 p-0" id='input-side-container'>
             <input type="text" id="input-text" placeholder="Click the Below Letters"></input>
             <Hive clientShuffledWord={props.clientShuffledWord} childSetClientShuffledWord={props.childSetClientShuffledWord} clientCenterLetter={props.clientCenterLetter}/>
-            <Buttons clientShuffledWord={props.clientShuffledWord} childSetClientShuffledWord={props.childSetClientShuffledWord} clientCenterLetter={props.clientCenterLetter} clientLanguage={props.clientLanguage}/>
+            <Buttons clientCorrectWords={props.clientCorrectWords} childSetClientCorrectWords={props.childSetClientCorrectWords} clientShuffledWord={props.clientShuffledWord} childSetClientShuffledWord={props.childSetClientShuffledWord} clientCenterLetter={props.clientCenterLetter} clientLanguage={props.clientLanguage}/>
         </div>
     )
 }

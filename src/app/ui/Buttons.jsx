@@ -21,7 +21,16 @@ const Buttons = (props) => {
             console.log(dictionary[word.length][i])
         }
         if (dictionary[word.length].includes(word)) {
-            alert("Correct Word");
+            // Input word is in the dictionary
+            // First check if it has been found previously 
+            if (props.clientCorrectWords.includes(word)) {
+                alert("You have already found this word!");
+            } else {
+                // Add correctly found word to clientCorrectWords array
+                props.childSetClientCorrectWords(word);
+                console.log("props.clientCorrectWords: ", props.clientCorrectWords)
+                console.log("props.clientCorrectWords[0]: ", props.clientCorrectWords[0])
+            }
         } else {
             alert("WRONG WORD BRUH!");
         }
