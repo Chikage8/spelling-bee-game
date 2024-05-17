@@ -54,7 +54,7 @@ export function shuffleWord(word, center_letter) {
 }
 
 export default function Home() {
-  let language = "en-US"; // either en-US or TR case by case
+  let language = "TR"; // either en-US or TR case by case
   console.log("language: ", language)
   let dictionary;
   let letters_sorted_by_frequency;

@@ -26,9 +26,11 @@ const Buttons = (props) => {
             if (props.clientCorrectWords.includes(word)) {
                 alert("You have already found this word!");
             } else {
+                // CORRECT WORD CASE
                 // Add correctly found word to clientCorrectWords array
-                props.setScore(props.score + word.length);
                 props.childSetClientCorrectWords(word);
+                props.setScore(props.score + word.length);
+                props.setRemainingSeconds(parseInt(props.remainingSeconds) + 15);
                 console.log("props.clientCorrectWords: ", props.clientCorrectWords)
                 console.log("props.clientCorrectWords[0]: ", props.clientCorrectWords[0])
             }

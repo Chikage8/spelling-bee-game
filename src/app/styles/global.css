@@ -44,14 +44,14 @@ img {
   display: block;
 }
 
-#game-container {
-  /* display: flex; */
-}
+/* #game-container {
+  display: flex;
+} */
 
-#input-side-container{
-    /* margin-right: 52vw; */
-    /* margin-top: 30vh; */
-}
+/* #input-side-container{
+    margin-right: 52vw;
+    margin-top: 30vh;
+} */
 
 #input-text {
   position: relative;
