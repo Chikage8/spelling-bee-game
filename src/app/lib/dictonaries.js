@@ -1,3 +1,6 @@
+// Define available languages
+const supported_languages = ["TR", "EN"];
+
 // Object containing english words of different length
 const english_dictionary = {
     2:  [
@@ -51,7 +54,7 @@ const turkish_dictionary = {
     3:  [
             'SAĞ', 'SOL', 'CEM', 'BAL', 'DİL', 'FIR', 'GÖL', 'HAN', 'JÖN', 'KAŞ',
             'GÖZ', 'DAY', 'LAL', 'NAR', 'ÖRÜ', 'ŞAP', 'TAT', 'VAR', 'FAN', 'YIL',
-            'ZOR', 'FÖN', 'HIZ', 'KUL', 'MOR', 'PÜR', 'BOY'
+            'ZOR', 'FÖN', 'HIZ', 'KUL', 'MOR', 'PÜR', 'BOY', 'YAŞ', 'YAY', 'AŞK'
         ],
     4:  [
             'AĞIT', 'BAKI', 'CIVA', 'EVLİ', 'FANİ', 'GEMİ', 'JALE', 'KARA', 'NANE', 'ÖLÇÜ',
@@ -63,7 +66,7 @@ const turkish_dictionary = {
             'DÖNEM', 'ZORLU', 'YAKIN', 'GÖREV', 'KARŞI', 'DUYGU', 'DÜRÜM', 'ANLAM', 'KORKU', 'YAYIN', 
             'DOLAP', 'KIVAM', 'GELİŞ', 'GIDİŞ', 'YIKIM', 'SANRI', 'GÖRÜŞ', 'SÜREÇ', 'ZORLU', 'GÜÇLÜ',
             'CEVAP', 'GÖRME', 'HESAP', 'KEŞKE', 'KİBAR', 'BAYAT', 'ARABA', 'ERKEK', 'KADIN', 'KUZEY', 
-            'GÜNEY'
+            'GÜNEY', 'YAŞAM', 'KAYAK'
         ],
     6:  [
             'GÖRÜCÜ', 'YIRTIK', 'GÖMLEK', 'DÜŞMAN', 'ZENGIN', 'YAPRAK', 'KIYMET', 'YIKICI', 'KESKIN', 'GERÇEK', 
@@ -92,6 +95,7 @@ const turkish_letters_sorted_by_frequency = [
                                             ]
 
 module.exports = {
+    supported_languages,
     english_dictionary,
     turkish_dictionary,
     english_letters_sorted_by_frequency,

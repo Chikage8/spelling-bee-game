@@ -63,7 +63,7 @@ export default function Home() {
     console.log("language: ", language)
     console.log('"en-US": ', "en-US")
     console.log('language === "en-US": ', language === "en-US");
-    if (language === "en-US") {
+    if (language === "EN") {
       console.log("ENTERS IF")
       dictionary = english_dictionary;
       letters_sorted_by_frequency = english_letters_sorted_by_frequency
@@ -101,7 +101,8 @@ export default function Home() {
 
   // Get random word from the dictionary
   const randomWordIndex = getRandomInt(dictionary[7].length);
-  const word = dictionary[7][randomWordIndex].toLocaleUpperCase('en-US');
+  let localeLanguageCode = language === "EN" ? "en-US" : language;
+  const word = dictionary[7][randomWordIndex].toLocaleUpperCase(localeLanguageCode);
 
   console.log("word: ", word);
 

@@ -4,6 +4,8 @@ import React from 'react'
 import { useState } from 'react'
 import InputSide from './InputSide'
 import OutputSide from './OutputSide'
+import LanguageSelectDropdown from './LanguageManager'
+import LanguageManager from './LanguageManager'
 
 const ClientTopLevelComponent = (props) => {
     const [score, setScore] = useState(0);
@@ -34,6 +36,7 @@ const ClientTopLevelComponent = (props) => {
 
     return (
         <div className="flex flex-row justify-start items-start pt-64 pl-52" id="game-container">
+            <LanguageManager clientLanguage={clientLanguage} childSetClientLanguage={childSetClientLanguage}/>
             <InputSide score={score} setScore={setScore} clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientCenterLetter={clientCenterLetter} clientLanguage={clientLanguage} childSetClientShuffledWord={childSetClientShuffledWord}/>
             <OutputSide score={score} setScore={setScore} clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientLanguage={clientLanguage}/>
     </div>

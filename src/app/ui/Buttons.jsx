@@ -7,7 +7,7 @@ import { english_dictionary, turkish_dictionary, english_letters_sorted_by_frequ
 const Buttons = (props) => {
     let dictionary;
 
-    if (props.clientLanguage === "en-US") {
+    if (props.clientLanguage === "EN") {
         dictionary = english_dictionary;
     } else if (props.clientLanguage === "TR") {
         dictionary = turkish_dictionary;
