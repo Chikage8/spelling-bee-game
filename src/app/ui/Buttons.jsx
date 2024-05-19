@@ -36,10 +36,7 @@ const Buttons = (props) => {
 
     const checkWord = () => {
         let word = document.getElementById("input-text").value;
-        for (let i = 0; i < dictionary[word.length].length; i++) {
-            console.log(dictionary[word.length][i])
-        }
-        if (dictionary[word.length].includes(word)) {
+        if (word.length > 1 && word.length < 8 && dictionary[word.length].includes(word)) {
             // Input word is in the dictionary
             // First check if it has been found previously 
             if (props.clientCorrectWords.includes(word)) {
