@@ -1,16 +1,16 @@
 import Image from "next/image";
-import { english_dictionary, turkish_dictionary, english_letters_sorted_by_frequency, turkish_letters_sorted_by_frequency } from "./lib/dictonaries";
+import { english_dictionary, turkish_dictionary, english_letters_sorted_by_frequency, turkish_letters_sorted_by_frequency } from "../lib/dictonaries";
 import React from 'react';
-import Hive from './ui/Hive';
-import './styles/global.css';
-import ClientTopLevelComponent from "./ui/ClientTopLevelComponent";
-import Buttons from "./ui/Buttons";
-import InputSide from "./ui/InputSide";
-import OutputSide from "./ui/OutputSide";
+import Hive from '../ui/Hive';
+import '../styles/global.css';
+import ClientTopLevelComponent from "../ui/ClientTopLevelComponent";
+import Buttons from "../ui/Buttons";
+import InputSide from "../ui/InputSide";
+import OutputSide from "../ui/OutputSide";
 
-export function setLanguage(newLanguage) {
-  language = newLanguage;
-}
+// export function refreshTR() {
+//     location.reload();
+// }
 
 export function getRandomWord(dictionary, language) {
   const randomWordIndex = Math.floor(Math.random() * dictionary[7].length);
@@ -72,7 +72,6 @@ export default function Home() {
 
   function setDictionaryAndFrequentLetters(language) {
     console.log("language: ", language)
-    console.log('"en-US": ', "en-US")
     console.log('language === "en-US": ', language === "en-US");
     if (language === "EN") {
       console.log("ENTERS IF")
@@ -130,7 +129,7 @@ export default function Home() {
   
   return (
     <main>
-      {/* <ClientTopLevelComponent shuffledWord={shuffledWord} center_letter={center_letter} language={language}/> */}
+      <ClientTopLevelComponent shuffledWord={shuffledWord} center_letter={center_letter} language={language}/>
     </main>
   );
 }

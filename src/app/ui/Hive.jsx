@@ -7,7 +7,7 @@ import Buttons from './Buttons';
 
 const Hive = (props) => {
 
-    console.log(props.clientShuffledWord)
+    console.log("!!!!!!!!!!!!!: ",props.clientShuffledWord)
 
     return (
         <div className='hive-container'>
