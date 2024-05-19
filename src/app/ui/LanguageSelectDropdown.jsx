@@ -19,7 +19,7 @@ const LanguageSelectDropdown = (props) => {
     // revalidatePath(`/${e.target.innerHTML.toLocaleLowerCase(localeCode)}`)
     document.getElementById("input-text").value = "";
     let urlString = `/${e.target.innerHTML.toLocaleLowerCase(localeCode)}`;
-    console.log(typeof urlString, "** ", urlString )
+    // console.log(typeof urlString, "** ", urlString )
     // router.replace({ pathname: `/`, query: { u: "true" } });
     // router.push({ pathname: `/${e.target.innerHTML.toLocaleLowerCase(localeCode)}`, query: { u: "true" } });
     router.push(`/${e.target.innerHTML.toLocaleLowerCase(localeCode)}`);

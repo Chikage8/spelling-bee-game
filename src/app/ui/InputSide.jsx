@@ -20,7 +20,7 @@ const InputSide = (props) => {
     return (
         <div className="flex min-h-screen flex-col items-center gap-3 p-0" id='input-side-container'>
             <Timer remainingSeconds={remainingSeconds} setRemainingSeconds={setRemainingSeconds}/>
-            <textarea readonly="true" id="input-text" placeholder="Click the Below Letters"></textarea>
+            <textarea readOnly={true} id="input-text" placeholder="Click the Below Letters"></textarea>
             <Hive clientShuffledWord={props.clientShuffledWord} childSetClientShuffledWord={props.childSetClientShuffledWord} clientCenterLetter={props.clientCenterLetter}/>
             <Buttons remainingSeconds={remainingSeconds} setRemainingSeconds={setRemainingSeconds} score={props.score} setScore={props.setScore} clientCorrectWords={props.clientCorrectWords} childSetClientCorrectWords={props.childSetClientCorrectWords} clientShuffledWord={props.clientShuffledWord} childSetClientShuffledWord={props.childSetClientShuffledWord} clientCenterLetter={props.clientCenterLetter} clientLanguage={props.clientLanguage}/>
         </div>
