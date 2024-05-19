@@ -60,7 +60,8 @@ img {
 #input-text {
   position: relative;
   margin-left: 3.3vw;
-  /* margin-bottom: 2.5vh; */
+  resize: none;
+  height: 1.6rem;
 }
 
 .hive-container {
