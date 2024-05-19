@@ -44,14 +44,18 @@ img {
   display: block;
 }
 
-/* #game-container {
+#home-content {
+  /*className='fixed h-96 w-96 flex flex-col align-center justify-center'*/
   display: flex;
-} */
-
-/* #input-side-container{
-    margin-right: 52vw;
-    margin-top: 30vh;
-} */
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: fixed;
+  height: 30rem;
+  width: 35rem;
+  margin-left: 35rem;
+  margin-top: 10rem;
+}
 
 #input-text {
   position: relative;

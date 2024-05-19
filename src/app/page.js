@@ -1,12 +1,7 @@
 import Image from "next/image";
-import { english_dictionary, turkish_dictionary, english_letters_sorted_by_frequency, turkish_letters_sorted_by_frequency } from "./lib/dictonaries";
 import React from 'react';
-import Hive from './ui/Hive';
 import './styles/global.css';
-import ClientTopLevelComponent from "./ui/ClientTopLevelComponent";
-import Buttons from "./ui/Buttons";
-import InputSide from "./ui/InputSide";
-import OutputSide from "./ui/OutputSide";
+import HomeContent from "./ui/HomeContent";
 
 export function setLanguage(newLanguage) {
   language = newLanguage;
@@ -65,72 +60,9 @@ export function shuffleWord(word, center_letter) {
 }
 
 export default function Home() {
-  let language = "TR"; // either en-US or TR case by case
-  console.log("language: ", language)
-  let dictionary;
-  let letters_sorted_by_frequency;
-
-  function setDictionaryAndFrequentLetters(language) {
-    console.log("language: ", language)
-    console.log('"en-US": ', "en-US")
-    console.log('language === "en-US": ', language === "en-US");
-    if (language === "EN") {
-      console.log("ENTERS IF")
-      dictionary = english_dictionary;
-      letters_sorted_by_frequency = english_letters_sorted_by_frequency
-    } else if (language === "TR") {
-      dictionary = turkish_dictionary;
-      letters_sorted_by_frequency = turkish_letters_sorted_by_frequency;
-    } else {
-      console.log("ENTERS ELSE")
-      throw new Error('The current language is not supported, please select one of the languages from the dropdown');
-    }
-  }
-
-  function pickMostCommonLetter(letters ,letters_sorted_by_frequency) {
-    for (let i = 0; i < letters_sorted_by_frequency.length; i++) {
-      // Check if the most common english letter is in our letters array
-      if (letters.includes(letters_sorted_by_frequency[i])) {
-        console.log("!!!!!!!!!!!!!!!!!!!", letters_sorted_by_frequency[i])
-        return letters_sorted_by_frequency[i]
-      }
-      if (i === letters_sorted_by_frequency.length - 1) {
-        throw new Error('None of your letters was found in the alphabet!!!');
-      }
-    }
-  }
-
-  setDictionaryAndFrequentLetters(language);
-  
-  for (let i = 0; i < letters_sorted_by_frequency.length; i++) {
-    console.log(letters_sorted_by_frequency[i]);
-  }
-
-  // Get random word from the dictionary
-  const word = getRandomWord(dictionary, language);
-  
-
-  console.log("word: ", word);
-
-  // Pick the most common letter
-  const center_letter = pickMostCommonLetter(word, letters_sorted_by_frequency);
-  console.log("************************", center_letter)
-
-  // Create the letters array of the random word
-  // let shuffledWord = "";
-  // shuffleWord(word, center_letter).then(word => {
-    // shuffledWord = word
-  // });
-  let shuffledWord = shuffleWord(word, center_letter);
-
-  console.log("shuffledWord: ", shuffledWord);
-
-  console.log(shuffledWord);
-  console.log(center_letter);
-  
   return (
-    <main>
-      {/* <ClientTopLevelComponent shuffledWord={shuffledWord} center_letter={center_letter} language={language}/> */}
-    </main>
+    <div id="main-page" className="min-h-screen min-w-screen bg-amber-300">
+      <HomeContent />
+    </div>
   );
 }
