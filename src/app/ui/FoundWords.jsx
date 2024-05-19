@@ -22,7 +22,12 @@ const FoundWords = (props) => {
     console.log("SETTING SCORE TEXT with score: ", props.score)
     // setScoreText(`YourScore: ${score} `)
     // Set score text based on the current score
-    props.score === 0 ? setScoreText("You haven't found any words yet...") : setScoreText(`Your current score is: ${props.score}`)
+    console.log("!?!?!?!?!?!?!?!??!?: ", props.clientLanguage);
+    if (props.clientLanguage === "EN") {
+      props.score === 0 ? setScoreText("You haven't found any words yet...") : setScoreText(`Your current score is: ${props.score}`)
+    } else if (props.clientLanguage === "TR") {
+      props.score === 0 ? setScoreText("Henüz herhangi bir kelime bulmadın  ...") : setScoreText(`Güncel skorun: ${props.score}`)
+    }
     console.log("scoreText: ", scoreText);
 
     // List the found words on the right panel
@@ -30,7 +35,7 @@ const FoundWords = (props) => {
       setCorrectWordTexts([...correctWordTexts, <p key={i}>{props.clientCorrectWords[i]}</p>]);
       // correctWordTexts.push(<p>{props.clientCorrectWords[i]}</p>);
     }
-  },[props.clientCorrectWords])
+  },[props.clientCorrectWords, props.clientLanguage])
 
   return (
     <div id='found-words-container' className='ml-64 border border-black rounded-md h-96 w-96 px-8 py-3'>

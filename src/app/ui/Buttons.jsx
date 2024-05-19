@@ -1,11 +1,30 @@
 'use client'
 
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { shuffleWord } from '../page';
 import { english_dictionary, turkish_dictionary, english_letters_sorted_by_frequency, turkish_letters_sorted_by_frequency } from "../lib/dictonaries";
 
 const Buttons = (props) => {
     let dictionary;
+    const [deleteText, setDeleteText] = useState("DELETE");
+    const [shuffleText, setShuffleText] = useState("SHUFFLE");
+    const [enterText, setEnterText] = useState("ENTER");
+
+    const setTextLanguage = (language) => {
+        if (language === "EN") {
+            setDeleteText("DELETE");
+            setShuffleText("SHUFFLE");
+            setEnterText("ENTER");
+        } else if(language === "TR") {
+            setDeleteText("SİL");
+            setShuffleText("KARIŞTIR");
+            setEnterText("GİR");
+        }
+    };    
+
+    useEffect(()=> {
+        setTextLanguage(props.clientLanguage);
+    }, [props.clientLanguage]);
 
     if (props.clientLanguage === "EN") {
         dictionary = english_dictionary;
@@ -57,9 +76,9 @@ const Buttons = (props) => {
         
     return (
         <div id='button-container' className='flex gap-1 ml-9'>
-            <button className='gap-1 border-2 border-black p-1' id="delete-button" onClick={handleDelete}>Delete</button>
-            <button className='gap-1 border-2 border-black p-1 ml-2' id="shuffle-button" onClick={handleShuffle}>Shuffle</button>
-            <button className='gap-1 border-2 border-black p-1 ml-2' id="enter-button" onClick={handleEnter}>Enter</button>
+            <button className='gap-1 border-2 border-black p-1' id="delete-button" onClick={handleDelete}>{deleteText}</button>
+            <button className='gap-1 border-2 border-black p-1 ml-2' id="shuffle-button" onClick={handleShuffle}>{shuffleText}</button>
+            <button className='gap-1 border-2 border-black p-1 ml-2' id="enter-button" onClick={handleEnter}>{enterText}</button>
         </div>
     )
 }
