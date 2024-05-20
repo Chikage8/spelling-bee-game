@@ -15,21 +15,21 @@ const LanguageManager = (props) => {
 
   return (
     <div>
-      {/* {!isSelectingLanguage && */}
-      <div className='flex flex-row gap-1'>
-          <p>{props.clientLanguage} </p> 
-        <Image
-          onClick={()=>{setIsSelectingLanguage(!isSelectingLanguage)}}
-          src="/down-arrow.svg"
-          width={15}
-          height={15}
-          alt='Down arrow'
-        />
-      </div>
-      {/* } */}
+    {!props.isGameOver &&
+    <div>
+        <div className='flex flex-row gap-1'>
+            <p>{props.clientLanguage} </p> 
+          <Image
+            onClick={()=>{setIsSelectingLanguage(!isSelectingLanguage)}}
+            src="/down-arrow.svg"
+            width={15}
+            height={15}
+            alt='Down arrow'
+          />
+        </div>
       {isSelectingLanguage && <LanguageSelectDropdown setIsSelectingLanguage={setIsSelectingLanguage} clientLanguage={props.clientLanguage} childSetClientLanguage={props.childSetClientLanguage}/>}
-        
     </div>
+  }</div>
   )
 }
 

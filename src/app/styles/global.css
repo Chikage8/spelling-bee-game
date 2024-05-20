@@ -44,6 +44,11 @@ img {
   display: block;
 }
 
+#game-container {
+  margin-left: 7rem;
+  margin-top: -5rem;
+}
+
 #home-content {
   /*className='fixed h-96 w-96 flex flex-col align-center justify-center'*/
   display: flex;

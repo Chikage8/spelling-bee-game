@@ -8,15 +8,26 @@ import OutputSide from './OutputSide'
 import LanguageSelectDropdown from './LanguageManager'
 import LanguageManager from './LanguageManager'
 import { getRandomWord } from '../page'
+import { useRouter } from 'next/navigation';
+import GameOver from './GameOver';
+import { Gemunu_Libre } from 'next/font/google';
+
 
 const ClientTopLevelComponent = (props) => {
-    const [score, setScore] = useState(0);
+    const router = useRouter();
 
+    const [score, setScore] = useState(0);
     const [clientShuffledWord, setClientShuffledWord] = useState(props.shuffledWord);
     const [clientCenterLetter, setClientCenterLetter] = useState(props.center_letter);
     const [clientLanguage, setClientLanguage] = useState(props.language);
     const [clientCorrectWords, setClientCorrectWords] = useState([]);
     const [dictionary, setDictionary] = useState(turkish_dictionary);
+    const [isTimeEnded, setIsTimeEnded] = useState(false);
+
+    // if (isTimeEnded) {
+    //     router.push(`/`);
+    //     router.refresh();
+    // }
         
     const childSetClientShuffledWord = (value) => {
         setClientShuffledWord(value);
@@ -52,9 +63,10 @@ const ClientTopLevelComponent = (props) => {
 
     return (
         <div className="flex flex-row justify-start items-start pt-64 pl-52" id="game-container">
-            <LanguageManager clientLanguage={clientLanguage} childSetClientLanguage={childSetClientLanguage}/>
-            <InputSide score={score} setScore={setScore} clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientCenterLetter={clientCenterLetter} clientLanguage={clientLanguage} childSetClientShuffledWord={childSetClientShuffledWord}/>
-            <OutputSide score={score} setScore={setScore} clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientLanguage={clientLanguage}/>
+            <GameOver score={score} isGameOver={isTimeEnded}/>
+            <LanguageManager isGameOver={isTimeEnded} clientLanguage={clientLanguage} childSetClientLanguage={childSetClientLanguage}/>
+            <InputSide isGameOver={isTimeEnded} setIsTimeEnded={setIsTimeEnded} score={score} setScore={setScore} clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientCenterLetter={clientCenterLetter} clientLanguage={clientLanguage} childSetClientShuffledWord={childSetClientShuffledWord}/>
+            <OutputSide isGameOver={isTimeEnded} score={score} setScore={setScore} clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientLanguage={clientLanguage}/>
     </div>
     )
 }

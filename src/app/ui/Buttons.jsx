@@ -51,7 +51,11 @@ const Buttons = (props) => {
                 console.log("props.clientCorrectWords[0]: ", props.clientCorrectWords[0])
             }
         } else {
-            alert("WRONG WORD BRUH!");
+            if (props.clientLanguage === "EN") {
+                alert("This word isn't present in the dictionary.");
+            } else if (props.clientLanguage === "TR") {
+                alert("Bu kelime sözlükte yok. ");
+            }
         }
         document.getElementById("input-text").value = "";
         props.setLetterRemovedState(2);

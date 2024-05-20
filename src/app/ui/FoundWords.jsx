@@ -26,7 +26,7 @@ const FoundWords = (props) => {
     if (props.clientLanguage === "EN") {
       props.score === 0 ? setScoreText("You haven't found any words yet...") : setScoreText(`Your current score is: ${props.score}`)
     } else if (props.clientLanguage === "TR") {
-      props.score === 0 ? setScoreText("Henüz herhangi bir kelime bulmadın  ...") : setScoreText(`Güncel skorun: ${props.score}`)
+      props.score === 0 ? setScoreText("Henüz herhangi bir kelime bulmadınız...") : setScoreText(`Güncel skorun: ${props.score}`)
     }
     console.log("scoreText: ", scoreText);
 
