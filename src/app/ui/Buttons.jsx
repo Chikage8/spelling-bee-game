@@ -54,17 +54,24 @@ const Buttons = (props) => {
             alert("WRONG WORD BRUH!");
         }
         document.getElementById("input-text").value = "";
+        props.setLetterRemovedState(2);
+        props.setLetterRemovedStateChanged(!props.letterRemovedStateChanged); // // just to trigger the useEffect on the Hive.jsx
     }
 
     const handleDelete = (e) => {
-        // alert("Delete Clicked")
+        // Remove the last letter from the word
         let word = document.getElementById("input-text").value
         word = word.substring(0, word.length - 1);
         document.getElementById("input-text").value = word;
+        // Set states to make the last clicked letter clickable again since its removed from the word
+        props.setLetterRemovedState(1);
+        props.setLetterRemovedStateChanged(!props.letterRemovedStateChanged); // // just to trigger the useEffect on the Hive.jsx
     }
     
     const handleShuffle = (e) => {
         props.childSetClientShuffledWord(shuffleWord(props.clientShuffledWord, props.clientCenterLetter));
+        props.setLetterRemovedState(3);
+        props.setLetterRemovedStateChanged(!props.letterRemovedStateChanged);
     }
     
     const handleEnter = (e) => {

@@ -32,7 +32,7 @@ export function shuffleWord(word, center_letter) {
 
   console.log("After center_letter operations... shuffledWord: ", shuffledWord, " word: ", word);
 
-  // Shuffle the rest of the word by placing random letters from the to the shuffledWord excluding index 3 which holds the center letter
+  // Shuffle the rest of the word by placing random letters from the word to the shuffledWord excluding index 3 which holds the center letter
   console.log("shuffling")
   let shuffledWordIndex = 0;
   while (word.length > 0) {
