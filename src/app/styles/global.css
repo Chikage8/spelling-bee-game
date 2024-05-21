@@ -63,6 +63,10 @@ img {
   margin-top: 10rem;
 }
 
+#found-words-container {
+  background-color: var(--hex-active-color);
+}
+
 #input-text {
   position: relative;
   margin-left: 3.3vw;
