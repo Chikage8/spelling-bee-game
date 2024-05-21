@@ -32,12 +32,12 @@ const LanguageSelectDropdown = (props) => {
   }
 
   useEffect(()=>{
-    supported_languages.map(language => {
+    supported_languages.map((language, index) => {
       if (language !== props.clientLanguage) {
         // // If the language is not the current language
         // let new_language = language === 'en-US' ? "EN": language;
         // console.log(new_language)
-        setLanguageAlternatives([...languageAlternatives, <p onClick={handleLanguageChange}>{language}</p>]);
+        setLanguageAlternatives([...languageAlternatives, <p key={index} onClick={handleLanguageChange}>{language}</p>]);
       }
     })
 },[props.clientLanguage])
