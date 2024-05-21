@@ -83,9 +83,9 @@ const Buttons = (props) => {
     }
         
     return (
-        <div id='button-container' className='flex gap-1 ml-9'>
+        <div id='button-container' className='flex gap-1 ml-11'>
             <button className='gap-1 border-2 border-black p-1' id="delete-button" onClick={handleDelete}>{deleteText}</button>
-            <button className='gap-1 border-2 border-black p-1 ml-2' id="shuffle-button" onClick={handleShuffle}>{shuffleText}</button>
+            {/* <button className='gap-1 border-2 border-black p-1 ml-2' id="shuffle-button" onClick={handleShuffle}>{shuffleText}</button> */}
             <button className='gap-1 border-2 border-black p-1 ml-2' id="enter-button" onClick={handleEnter}>{enterText}</button>
         </div>
     )

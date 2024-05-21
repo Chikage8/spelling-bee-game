@@ -62,7 +62,7 @@ const ClientTopLevelComponent = (props) => {
     },[clientLanguage])
 
     return (
-        <div className="flex flex-row justify-start items-start pt-64 pl-52" id="game-container">
+        <div className="flex flex-row justify-start items-start pt-64 pl-52 client-top-level" id="game-container">
             <GameOver score={score} isGameOver={isTimeEnded}/>
             <LanguageManager isGameOver={isTimeEnded} clientLanguage={clientLanguage} childSetClientLanguage={childSetClientLanguage}/>
             <InputSide isGameOver={isTimeEnded} setIsTimeEnded={setIsTimeEnded} score={score} setScore={setScore} clientCorrectWords={clientCorrectWords} childSetClientCorrectWords={childSetClientCorrectWords} clientShuffledWord={clientShuffledWord} clientCenterLetter={clientCenterLetter} clientLanguage={clientLanguage} childSetClientShuffledWord={childSetClientShuffledWord}/>

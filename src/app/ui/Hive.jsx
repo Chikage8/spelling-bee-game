@@ -122,27 +122,28 @@ const Hive = (props) => {
                 makeHexClickable(i);
             }
         } else if (props.letterRemovedState === 3) { 
-            // When SHUFFLE button has been pressed
-            // Make all letters clickable and set only the letters that are present within the word unclickable, prioritize center_letter as its unmoved
+            // Disabling shuffle as it wasn't somehow working with hexagons turning grey after being clicked, made the choice to keep the visual cues instead of the shuffle option
+            // // When SHUFFLE button has been pressed
+            // // Make all letters clickable and set only the letters that are present within the word unclickable, prioritize center_letter as its unmoved
 
-            // Make all letters Clickable
-            for (let i = 0; i < 7; i++) {
-                makeHexClickable(i);
-            }
-            setClickedHexes([]);
+            // // Make all letters Clickable
+            // for (let i = 0; i < 7; i++) {
+            //     makeHexClickable(i);
+            // }
+            // setClickedHexes([]);
 
-            // Get the currently formed word by the user
-            let word = document.getElementById("input-text").value;
+            // // Get the currently formed word by the user
+            // let word = document.getElementById("input-text").value;
             
-            // Loop through the letters of the newly shuffledWord and if the letter is present within the currently formed word make the corresponding hex unclickable and remove that letter from the word
-            for (let i = 0; i < props.clientShuffledWord.length; i++) {
-                if (word.includes(props.clientShuffledWord[i])) {
-                    console.log("i: ", i);
-                    makeHexUnclickable(i);
-                    setClickedHexes([...clickedHexes, `hexagon-${i}`]);
-                    word = word.replace(props.clientShuffledWord[i], "");
-                }
-            }
+            // // Loop through the letters of the newly shuffledWord and if the letter is present within the currently formed word make the corresponding hex unclickable and remove that letter from the word
+            // for (let i = 0; i < props.clientShuffledWord.length; i++) {
+            //     if (word.includes(props.clientShuffledWord[i])) {
+            //         console.log("i: ", i);
+            //         makeHexUnclickable(i);
+            //         setClickedHexes([...clickedHexes, `hexagon-${i}`]);
+            //         word = word.replace(props.clientShuffledWord[i], "");
+            //     }
+            // }
         }
         // Set the state as "managed" again
         props.setLetterRemovedState(0);

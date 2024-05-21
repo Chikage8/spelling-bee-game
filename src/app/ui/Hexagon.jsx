@@ -1,8 +1,25 @@
 'use client'
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 const Hexagon = ({ children, id, hexClickable, setHexClickable, clickedHexes, setClickedHexes}) => {
+  const [colorClassName, setColorClassName] = useState("hexagon-active");
+
+  // Change the color of the hexagon based on its state(used or not)
+  useEffect(() => {
+    // for (let i = 0; i < clickedHexes.length; i++) {
+    //   console.log(`Before, clickedHexes[${i}]: `, clickedHexes[i]);
+    // }
+    if(hexClickable) {
+      setColorClassName("hexagon-active");
+    } else {
+      setColorClassName("hexagon-deactive");
+    }
+    // for (let i = 0; i < clickedHexes.length; i++) {
+    //   console.log(`After, clickedHexes[${i}]: `, clickedHexes[i]);
+    // }
+  }, [hexClickable])
+
 
   function handleHexClick(e) {
     // If the letter hasn't been used already add the letter to the word
@@ -24,7 +41,7 @@ const Hexagon = ({ children, id, hexClickable, setHexClickable, clickedHexes, se
   }
 
   return (
-    <div className="hexagon" key={id} id={id} onClick={handleHexClick}>
+    <div className={colorClassName} key={id} id={id} onClick={handleHexClick}>
       <div className="inner">
         {children}
       </div>

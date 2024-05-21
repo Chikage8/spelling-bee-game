@@ -1,9 +1,10 @@
 :root {
-    --hex-top: 10%;
-    --hex-right: 10%;
-    --hex-bottom: 10%;
-    --hex-left: 10%;
-    --hex-color: #BBBB00;
+  --hex-top: 10%;
+  --hex-right: 10%;
+  --hex-bottom: 10%;
+  --hex-left: 10%;
+  --hex-active-color: #BBBB00;
+  --hex-deactive-color:  #777777;
 }
 
 html,
@@ -62,6 +63,10 @@ img {
   margin-top: 10rem;
 }
 
+.client-top-level {
+  /* background-color: #111111; */
+}
+
 #input-text {
   position: relative;
   margin-left: 3.3vw;
@@ -116,7 +121,7 @@ img {
     /* transform: translate(0, -50px); */
 }
 
-.hexagon {
+.hexagon-active {
   position: relative;
   top: var(--hex-top);
   right: var(--hex-right);
@@ -124,12 +129,12 @@ img {
   left: var(--hex-left);
   width: 100px;
   height: 57.735px;
-  background-color: var(--hex-color);
+  background-color: var(--hex-active-color);
   margin: 28.87px 0;
 }
   
-.hexagon:before,
-.hexagon:after {
+.hexagon-active:before,
+.hexagon-active:after {
   content: "";
   position: absolute;
   width: 0;
@@ -137,15 +142,47 @@ img {
   border-right: 50px solid transparent;
 }
 
-.hexagon:before {
+.hexagon-active:before {
   bottom: 100%;
-  border-bottom: 28.87px solid var(--hex-color);
+  border-bottom: 28.87px solid var(--hex-active-color);
 }
 
-.hexagon:after {
+.hexagon-active:after {
   top: 100%;
   width: 0;
-  border-top: 28.87px solid var(--hex-color);
+  border-top: 28.87px solid var(--hex-active-color);
+}
+
+.hexagon-deactive {
+  position: relative;
+  top: var(--hex-top);
+  right: var(--hex-right);
+  bottom: var(--hex-bottom);
+  left: var(--hex-left);
+  width: 100px;
+  height: 57.735px;
+  background-color: var(--hex-deactive-color);
+  margin: 28.87px 0;
+}
+  
+.hexagon-deactive:before,
+.hexagon-deactive:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon-deactive:before {
+  bottom: 100%;
+  border-bottom: 28.87px solid var(--hex-deactive-color);
+}
+
+.hexagon-deactive:after {
+  top: 100%;
+  width: 0;
+  border-top: 28.87px solid var(--hex-deactive-color);
 }
 
 .inner {
